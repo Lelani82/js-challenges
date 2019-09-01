@@ -11,8 +11,13 @@ with no changes to the function?
 */
 
 function largestNumber(arr) {
-    // Your code here
-    // Google JS syntax ;)
+    let largest = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (largest < arr[i]) {
+            largest = arr[i];
+        }
+    }
+    return largest;
 }
 
 var assert = require('assert');
