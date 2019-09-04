@@ -3,8 +3,23 @@
 // Test your solution:
 // npm test
 
+function calculateTotalScores(scores) {
+    // Calculates total of array of scores that's passed in
+    let totalScore = 0;
+    for (let score of scores) {
+        totalScore += score;
+    }
+    return totalScore;
+}
+
 function findWinner(players) {
-    // Your code here
+    let winner = players[0];
+    for (let ind = 1; ind < players.length; ind++) {
+        if (calculateTotalScores(players[ind].scores) > calculateTotalScores(winner.scores)) {
+            winner = players[ind];
+        }
+    }
+    return winner.name;
 }
 
 module.exports = {
