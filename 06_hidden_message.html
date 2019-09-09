@@ -18,30 +18,33 @@
  -->
 <!doctype html>
 <html>
-  <head>
-    <title>Hidden Message</title>
 
-    <style>
+<head>
+  <title>Hidden Message</title>
+
+  <style>
     body {
       text-align: center;
     }
+
     #hidden-message {
-      background: #c4c5ff;
+      background: #785df1;
       padding: 200px;
       display: none;
     }
-    </style>
-  </head>
+  </style>
+</head>
 
-  <body>
-    <div id="hidden-message">This is our hidden message!</div>
-    <button id="button-show">Show secret message</button>
-  </body>
+<body>
+  <div id="hidden-message">This is our hidden message!</div>
+  <button id="button-show">Show secret message</button>
+  <button id="button-hide">Hide secret message</button>
+</body>
 
-  <script>
+<script>
   // Get the element #hidden-message and assign it to hiddenMessage variable
   const hiddenMessage = document.querySelector('#hidden-message')
-  
+
   // Get the element #button-show and assign it to buttonShow variable
   const buttonShow = document.querySelector('#button-show')
 
@@ -50,6 +53,15 @@
     // buttonShow has been clicked, show the hidden message.
     hiddenMessage.style.display = 'block';
   }
-  </script>
+
+  // Get the element #button-show and assign it to buttonShow variable
+  const buttonHide = document.querySelector('#button-hide')
+
+  // Listen for a buttonHide click
+  buttonHide.onclick = function () {
+    // buttonHide has been clicked, hide the message.
+    hiddenMessage.style.display = 'none';
+  }
+</script>
 
 </html>
