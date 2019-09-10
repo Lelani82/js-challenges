@@ -172,10 +172,13 @@ const shop = {
 	},
 
 	updateProductPrice: (id, newPrice) => {
-		// Update the price of a specific product
-		console.log(newPrice);
-		let product = shop.productById(id);
-		productCost = newPrice;
+		// update the price of a specific product
+		for (product of drinkShop.products) {
+			if (product.id == id) {
+				product.price = newPrice;
+			}
+		}
+		return true;
 	}
 }
 

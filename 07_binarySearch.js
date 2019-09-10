@@ -15,9 +15,29 @@ Example:
 */
 
 function binarySearch(binaryArray, searchValue) {
-    // Your code here
-}
+    let firstIndex = 0;
+    let lastIndex = binaryArray.length - 1;
+    let middleIndex = Math.floor((lastIndex + firstIndex) / 2);
 
-module.exports = {
-    binarySearch
-};
+    while (binaryArray[middleIndex] != searchValue && firstIndex < lastIndex) {
+        if (searchValue < binaryArray[middleIndex]) {
+            lastIndex = middleIndex - 1;
+        }
+        else if (searchValue > binaryArray[middleIndex]) {
+            firstIndex = middleIndex + 1;
+        }
+        middleIndex = Math.floor((lastIndex + firstIndex) / 2);
+    }
+
+    return (binaryArray[middleIndex] != searchValue) ? -1 : middleIndex;
+}
+Collapse
+
+
+
+
+
+binarySearch([1, 5, 8, 12, 20, 21], 8);
+// module.exports = {
+//     binarySearch
+// };
