@@ -12,7 +12,8 @@ Because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and 1*2 = 2
 */
 
 function persistence(num) {
-    //enter code here
+    let arr = Array.from(String(num), Number);
+    console.log(arr); // [1, 2, 3, 4]
 }
 
 module.exports = {
