@@ -19,11 +19,11 @@ function persistence(num) {
         console.log(arr);
         // iterate through array & multiply numbers together
         total = 1;
-        for (let i = 0; i < arr.length; i++) {
-            total *= arr[i];
-        }
-        console.log(total);
+        // for (let i = 0; i < arr.length; i++) {
+        //     total *= arr[i];
     }
+    console.log(total);
+}
 }
 
 module.exports = {
