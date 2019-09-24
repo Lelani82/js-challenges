@@ -12,8 +12,18 @@ Because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and 1*2 = 2
 */
 
 function persistence(num) {
-    let arr = Array.from(String(num), Number);
-    console.log(arr); // [1, 2, 3, 4]
+    // Continue to split numbers while num <= 9 (until single digit)
+    while (num <= 9) {
+        // split number into array of numbers
+        let arr = Array.from(String(num), Number);
+        console.log(arr);
+        // iterate through array & multiply numbers together
+        total = 1;
+        for (let i = 0; i < arr.length; i++) {
+            total *= arr[i];
+        }
+        console.log(total);
+    }
 }
 
 module.exports = {
