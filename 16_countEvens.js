@@ -17,7 +17,20 @@ Google - mocha tests to get an idea.
 */
 
 const countEvens = (arr) => {
-// Your code here
+    // Your code here
+    odd = 0;
+    even = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 == 0) {
+            even += 1;
+        } else {
+            odd += 1;
+        }
+    }
+    console.log(even);
+    console.log(odd);
+
 }
-  
+
 // Your tests here
+countEvens([1, 2, 3, 4]);
