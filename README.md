@@ -36,3 +36,4 @@
 * 19_uniqueString
 * 20_commonCharacters
 * 21_equalValues
+* 22_multiplyValue
