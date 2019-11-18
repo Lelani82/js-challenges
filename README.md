@@ -41,3 +41,4 @@
 * 24_narcissisticNumber
 * 25_formatNames
 * 26_reverseBytes
+* 27_looseChange
