@@ -42,3 +42,4 @@
 * 25_formatNames
 * 26_reverseBytes
 * 27_looseChange
+* 28_decipher
