@@ -40,3 +40,4 @@
 * 23_conwaysGameOfLife
 * 24_narcissisticNumber
 * 25_formatNames
+* 26_reverseBytes
