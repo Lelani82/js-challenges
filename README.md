@@ -39,3 +39,4 @@
 * 22_multiplyValue
 * 23_conwaysGameOfLife
 * 24_narcissisticNumber
+* 25_formatNames
