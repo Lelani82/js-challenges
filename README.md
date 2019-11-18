@@ -43,3 +43,4 @@
 * 26_reverseBytes
 * 27_looseChange
 * 28_decipher
+* 29_alphabet_position
