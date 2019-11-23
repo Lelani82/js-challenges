@@ -10,16 +10,17 @@ Question: Why does the test pass for the third (last) test
 with no changes to the function?
 */
 
-function largestNumber(arr) {
-    let largest = arr[0];
-    for (let i = 0; i < arr.length; i++) {
-        if (largest < arr[i]) {
-            largest = arr[i];
+function largestNumber(arr) {               // Function that takes array
+    let largest = arr[0];                   // var = 0th item in array
+    for (let i = 0; i < arr.length; i++) {  // For item in array do this
+        if (largest < arr[i]) {             // Check if assigned variable (0th item) < next array item
+            largest = arr[i];               // if it is then reassigns var to array item
         }
     }
-    return largest;
+    return largest;                         // returns var
 }
 
+// Testing:
 var assert = require('assert');
 
 describe('largestNumber', function () {

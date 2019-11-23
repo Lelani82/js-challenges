@@ -10,13 +10,16 @@
 // Run 'mocha 01_jsIntro.js' to test 
 // (you'll have to have mocha installed globally)
 
-// Define global variables here
+// Define global variables here:
 const myString = 'my string';
 let numbers = 7;
 
+// Create function:
 function setNumbers(num) {
   return numbers = num;
 }
+
+// Testing:
 var assert = require('assert');
 
 describe('jsIntro', () => {
