@@ -92,25 +92,23 @@ const shop = {
 	upperCaseShopTitle: () => {
 		// Return an uppercase shop title.
 		// Don't repeat yourself. Use the two functions you just built!
-		// let title = shop.shopTitle();
-		// return shop.upperCase(title);
-		return this.upperCase(this.shopTitle());
+		return this.upperCase(this.shopTitle());		//this.method(this.method())
 	},
 
 	productById: productId => {
 		// Return a specific product object
 		// When the product is not found return null
-		let prodArr = drinkShop.products;
-		for (let product of prodArr) {
-			if (product.id === product.Id)
-				return product;
+		let prodArr = drinkShop.products;			// create array that stores all shop.products
+		for (let product of prodArr) {				// using for loop to check each item in array &
+			if (product.id === product.Id)			// compares array product.id to input product.Id
+				return product;						// returns product name if found
 		}
-		return null;
+		return null;								// returns null if not found
 	},
 
 	productCost: productId => {
 		// given a product id, return its price. DRY ;)
-		let product = shop.productById(productId);
+		let product = shop.productById(productId);	// using shop & productById functions created ealier
 		return product.price;
 	},
 
@@ -121,28 +119,28 @@ const shop = {
 		// E.g. 10 Amelia St, Sydney, 2000
 		// Hint: some destructuring might save you a few lines.
 		// Return null if customer not found
-		let customer = drinkShop.customers[email];
-		if (customer) {
+		let customer = drinkShop.customers[email];		//assign customer var to customer with email input
+		if (customer) {									// checking if input customers address matches ...
 			let {
 				streetNumber,
 				street,
 				city,
 				postcode
-			} = drinkShop.customers[email].address;
-			return `${streetNumber} ${street}, ${city}, ${postcode}`
+			} = drinkShop.customers[email].address;		// ... customers stored email & address
+			return `${streetNumber} ${street}, ${city}, ${postcode}` // return address string interpolation
 		} else {
-			return null;
+			return null;								// else return null if not found
 		}
 	},
 
 	customerOrderById: (email, orderId) => {
 		// Returns the customer order for the provided customer and orderId
 		// Returns null if the order isn't found
-		let customer = drinkShop.customers[email];
-		let orders = customer ? customer.orders : [];
-		for (let order of orders) {
-			if (order.id === orderId) {
-				return order;
+		let customer = drinkShop.customers[email];			// create customer var using email input
+		let orders = customer ? customer.orders : [];		//customer var ? execute true : execute false
+		for (let order of orders) {							// for each item in items
+			if (order.id === orderId) {						// check if stored order id === input orderId
+				return order;								// return order if true
 			}
 		}
 	},
@@ -150,7 +148,7 @@ const shop = {
 	totalCost: (email, orderId) => {
 		// Return the total cost of an order.
 		// If the order isn't valid, return 0
-		let order = shop.customerOrderById(email, orderId);
+		let order = shop.customerOrderById(email, orderId); // create order var using 
 		if (order === null) {
 			return 0;
 		}
