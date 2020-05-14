@@ -10,14 +10,24 @@ Question: Why does the test pass for the third (last) test
 with no changes to the function?
 */
 
-function largestNumber(arr) {               // Function that takes array
-    let largest = arr[0];                   // var = 0th item in array
-    for (let i = 0; i < arr.length; i++) {  // For item in array do this
-        if (largest < arr[i]) {             // Check if assigned variable (0th item) < next array item
-            largest = arr[i];               // if it is then reassigns var to array item
+// function largestNumber(arr) {               // Function that takes array
+//     let largest = arr[0];                   // var = 0th item in array
+//     for (let i = 0; i < arr.length; i++) {  // For item in array do this
+//         if (largest < arr[i]) {             // Check if assigned variable (0th item) < next array item
+//             largest = arr[i];               // if it is then reassigns var to array item
+//         }
+//     }
+//     return largest;                         // returns var
+// }
+
+largestNumber = (input) => {
+    let largest = input[0];                         
+    for (let i = 0; i < input.length; i++) {
+        if (largest < input[i]) {
+            largest = input[i];
         }
     }
-    return largest;                         // returns var
+    return largest;
 }
 
 // Testing:

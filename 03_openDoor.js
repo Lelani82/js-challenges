@@ -26,6 +26,14 @@ function openDoor(input) {
 	}
 	return false;														// else returns false
 }
+
+// openDoor = (item) => {
+// 		if (item.name === "Simon" && item.hasCoffee = true)
+// 		return true;
+// } else {
+// return false;
+// }
+
 module.exports = {
 	openDoor
 }
