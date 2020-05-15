@@ -18,7 +18,7 @@ npm test
 (requires jest: npm i -g jest)
 */
 
-function openDoor(input) {
+openDoor = (input) => {
 	for (let i = 0; i < input.length; i++) {							// iterate through input array
 		if (input[i].name === "Simon" && input[i].hasCoffee == true) {	//check if both conditions are true
 			return true;												//then returns true
@@ -27,12 +27,13 @@ function openDoor(input) {
 	return false;														// else returns false
 }
 
-// openDoor = (item) => {
-// 		if (item.name === "Simon" && item.hasCoffee = true)
+// openDoor = (input) => {
+// 		if (input.name === "Simon" && input.hasCoffee = true) {
 // 		return true;
-// } else {
-// return false;
-// }
+// 		} else {
+// 		return false;
+// 		};
+// 	}
 
 module.exports = {
 	openDoor
