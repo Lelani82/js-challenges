@@ -86,24 +86,30 @@ const shop = {
 
 	upperCase: (string) => {
 		// Return an uppercase version of string
-		
+		return string.toUpperCase();
 	},
 
 	upperCaseShopTitle: () => {
 		// Return an uppercase shop title.
 		// Don't repeat yourself. Use the two functions you just built!
-		
+		return this.upperCase(this.shopTitle());
 	},
 
 	productById: productId => {
 		// Return a specific product object
-		// When the product is not found return null
-		
+        // When the product is not found return null
+        let allProducts = drinkShop.products;
+        for (let i=0; i<allProducts.length; i++){
+            if (allProducts.id == productId) 
+                return allProducts.title;
+        }
+            return null;
 	},
 
 	productCost: productId => {
 		// given a product id, return its price. DRY ;)
-		
+        let product = shop.productById(productId);
+        return product.price;
 	},
 
 	formatAddress: email => {
@@ -113,7 +119,8 @@ const shop = {
 		// E.g. 10 Amelia St, Sydney, 2000
 		// Hint: some destructuring might save you a few lines.
 		// Return null if customer not found
-		
+        let allCustomers = drinkShop.customers;
+        
 	},
 
 	customerOrderById: (email, orderId) => {
