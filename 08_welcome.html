@@ -26,23 +26,38 @@
 
 <body>
 
-  <p><input type="text" placeholder="Enter your name"></p>
+  <p><input type="text" id="fname" placeholder="Enter your first name"></p>
+  <p><input type="text" id="lname" placeholder="Enter your last name"></p>
 
   <h1></h1>
 
 </body>
 
 <script>
-  const name = document.querySelector('input')
-  const welcomeMessage = document.querySelector('h1')
-  name.onkeyup = function () {
-    // hint: name.value gives you the current text in the input box
-    welcomeMessage.textContent = `Welcome, ${name.value}!`;
-  }
+  // const firstName = document.querySelector('input')
+  const firstName = document.getElementById('fname');
+  const lastName = document.getElementById('lname');
+  const welcomeMessage = document.querySelector('h1');
+  console.log(firstName.value);
+  console.log(lastName.value)
+  lastName.onkeyup = function () {
+  // hint: name.value gives you the current text in the input box
+    if (lastName.value.length < 1) {
+      welcomeMessage.textContent = `Welcome, please enter your full name ...`;
+    } else {
+      welcomeMessage.textContent = `Welcome, ${firstName.value.toUpperCase()} ${lastName.value}!`;
+    }   
+  }  
 
   // Add some padding:
-  let bodyFont = document.querySelector("body")
+  let bodyFont = document.querySelector("body");
+  let pPadding = document.querySelector("p");
+  let inputField1 = document.getElementById("fname");
+  let inputField2 = document.getElementById("lname");
   bodyFont.style.fontFamily = "Arial,sans-serif";
+  pPadding.style.padding = "12px 20px";
+  inputField1.style.border = "2px solid red";
+  inputField2.style.border = "2px solid red";
 </script>
 
 </html>

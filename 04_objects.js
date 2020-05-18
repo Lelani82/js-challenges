@@ -95,26 +95,15 @@ const shop = {
 		return this.upperCase(this.shopTitle());		//this.method(this.method())
 	},
 
-	// productById: productId => {
-	// 	// Return a specific product object
-	// 	// When the product is not found return null
-	// 	let prodArr = drinkShop.products;			// create array that stores all shop.products
-	// 	for (let product of prodArr) {				// using for loop to check each item in array &
-	// 		if (product.id === product.Id)			// compares array product.id to input product.Id
-	// 			return product;						// returns product name if found
-	// 	}
-	// 	return null;								// returns null if not found
-	// },
-
 	productById: productId => {
 		// Return a specific product object
-        // When the product is not found return null
-        let allProducts = drinkShop.products;
-        for (let i=0; i <  allProducts.length; i++){
-            if (allProducts.id == productId) 
-                return allProducts.title;
-        }
-            return null;
+		// When the product is not found return null
+		let prodArr = drinkShop.products;			// create array that stores all shop.products
+		for (let product of prodArr) {				// using for loop to check each item in array &
+			if (product.id === product.Id)			// compares array product.id to input product.Id
+				return product;						// returns product name if found
+		}
+		return null;								// returns null if not found
 	},
 
 	productCost: productId => {

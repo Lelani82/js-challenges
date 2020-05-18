@@ -10,13 +10,18 @@
 // Run 'mocha 01_jsIntro.js' to test 
 // (you'll have to have mocha installed globally)
 
-// Define global variables here:
-const myString = 'my string';
-let numbers = 7;
+// Define global variables here:        global variables are outside functions & can be used anywhere
+const myString = 'my string';           // const cant be reassigned
+let numbers = 7;                        // let can be reassigned
 
 // Create function:
-function setNumbers(num) {
-  return numbers = num;
+// function setNumbers(num) {
+//   return numbers = num;
+// }
+
+setNumbers = (input) => {
+  numbers = input
+  return numbers;
 }
 
 // Testing:
