@@ -15,17 +15,17 @@ function persistence(num) {
     // Continue to split numbers while num <= 9 (until single digit)
     while (num <= 9) {
         // split number into array of numbers
-        let arr = Array.from(String(num), Number);
-        console.log(arr);
-        // iterate through array & multiply numbers together
-        total = 1;
+        //let arr = Array.from(String(num), Number);
+        //console.log(arr);
+        // iterate through array & multiply numbers together & count how many times this happens
+        //total = 1;
         // for (let i = 0; i < arr.length; i++) {
         //     total *= arr[i];
     }
-    console.log(total);
-}
+    //console.log(total);
 }
 
-module.exports = {
-    persistence
-}
+persistence(39);
+// module.exports = {
+//     persistence
+// }
