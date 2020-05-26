@@ -13,9 +13,20 @@ npm test
 */
 
 function vowels(string) {
-    // Your code here
+    // Split string into array of letters
+    let arr = string.split('');
+    // create new empty array to store vowels in
+    let result = []; 
+    // iterate over array to look for vowels
+    for (let i=0; i < arr.length; i++) {
+        if (i === 'a') {
+            result.push(i)
+        }
+    }
+    console.log(result)
 }
 
-module.exports = {
-    vowels
-}
+vowels("The quick brown fox")
+// module.exports = {
+//     vowels
+// }
