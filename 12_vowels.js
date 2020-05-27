@@ -16,14 +16,11 @@ function vowels(string) {
     // Split string into array of letters
     let arr = string.split('');
     // create new empty array to store vowels in
-    let result = []; 
-    // iterate over array to look for vowels
-    for (let i=0; i < arr.length; i++) {
-        if (i === 'a') {
-            result.push(i)
-        }
-    }
-    console.log(result)
+    let vowelArray = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']; 
+    // filter arr with vowelArray
+    let result = arr.filter(function(item) {
+        return vowelArray.includes(item);
+    });
 }
 
 vowels("The quick brown fox")
