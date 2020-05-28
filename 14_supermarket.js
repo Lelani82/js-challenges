@@ -32,9 +32,12 @@ Check your solutions with npm test
 
 // Returns the queue time for all customers given number of tills
 function queueTime(customers, n) {
-    // Your code here
+    // Number of tills
+    let queueLength = (customers.length)/n;
+    console.log(queueLength);
 }
 
-module.exports = {
-    queueTime
-}
+queueTime([1,2,3,4,5,6], 2)
+// module.exports = {
+//     queueTime
+// }

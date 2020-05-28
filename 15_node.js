@@ -31,6 +31,10 @@ const requestHandler = (request, response) => {
     response.end('world')
   }
 
+  if (request.url === '/') {
+    response.end('welcome to the homepage')
+  }
+
   response.end('Not found!!')
 }
 
