@@ -1,9 +1,9 @@
 /*
 
-Working individually or in pairs write out differnt tests which will
+Working individually or in pairs write out different tests which will
 count the number of even numbers in an array. 
 
-Try to have at least three different tests which test differnt values
+Try to have at least three different tests which test different values
 put into your method, such as an empty array.
 
 Once you have done done this, write out the method and check if it passes. 

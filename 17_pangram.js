@@ -10,19 +10,23 @@ If the given string has any uppercase or numbers, it should return false
 */
 
 function isPangram(string) {
+    // split string into array of letters
+    let stringArray = string.split("");
     // define the alphabet
-    var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    string = string.split(" ");
-    for (let i = 0; i > letters.length; i++) {
-        if (!string.includes(letters[i])) {
-            return false;
-        }
-    }
-    return true;
-
+    let lettersArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "];
+    //iterate to see if it includes all letters from alphabet (lowercase only)
+    let result = stringArray.filter(function(item) {
+      return lettersArray.includes(item);
+    })
+    // if (stringArray == lettersArray) {
+    //   return true; 
+    //   } else {
+    //     return false; 
+    //   }
+    
 }
 
-console.log(isPangram("The quick brown fox jumps over the lazy dog"));
+isPangram("the quick Brown fox jumps over the lazy dog");
 // module.exports = {
 //     isPangram
 // };
